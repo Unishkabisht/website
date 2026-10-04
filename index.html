@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayOS – Hotel Review Management Software</title>
+  <meta name="description" content="StayOS helps hotels manage guest reviews, collect feedback and improve their online reputation — all in one place.">
+  <meta name="keywords" content="hotel review management software, hotel reputation management, manage hotel reviews, guest review management for hotels, hotel guest feedback software">
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="REPLACE_ME">
+
+  <!-- Open Graph -->
+
+  <!-- Twitter / X card -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GA4 (fires only when a real measurement ID is configured in js/app.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar container-wide">
+    <a href="/" class="nav-brand" aria-label="StayOS home">
+      <img src="images/stayoslogo.png" alt="StayOS logo" height="48" width="144" style="object-fit:contain; display:block;">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#platform">PLATFORM</a></li>
+      <li><a href="#workflow">RESULTS</a></li>
+      <li><a href="#solutions">WHO IT SERVES</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login">LOGIN</a>
+      <a href="signup.html" class="btn btn-black" id="nav-signup-cta" data-ga-cta="nav_signup">GET EARLY ACCESS &nearr;</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <header class="hero container-wide"
+    style="position: relative; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
+    <canvas id="hero-canvas"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"
+      aria-hidden="true"></canvas>
+    <div class="container" style="position: relative; z-index: 2;">
+      <h1 class="hero-brutalist">
+        <span class="reveal-wrap"><span class="reveal-text d1 outline-text">Manage</span></span>
+        <span class="reveal-wrap"><span class="reveal-text d2 solid-text">your reviews<span class="dot-accent"></span></span></span>
+        <span class="reveal-wrap"><span class="reveal-text d3 outline-text">in one place.</span></span>
+      </h1>
+
+      <div class="reveal-wrap">
+        <p class="reveal-text d3">StayOS is the complete hotel review management software for modern hospitality. Unify guest feedback from every platform, reply faster and improve your online reputation — all from one operational hub.</p>
+      </div>
+
+      <div class="hero-actions fade-up d4">
+        <a href="signup.html" class="btn btn-primary" id="hero-cta-primary" data-ga-cta="hero_primary">Get Early Access</a>
+        <a href="#platform" class="btn btn-outline" data-ga-cta="hero_see_platform">See the Platform</a>
+      </div>
+
+      <div class="video-wrapper clip-reveal d5">
+        <video src="images/promo.mp4" autoplay loop muted playsinline
+          width="1440" height="680"
+          aria-label="StayOS hotel review management platform walkthrough"></video>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======== INTRO (keyword-rich) ======== -->
+  <section class="section container" style="padding-bottom: 0;">
+    <div class="card-3d fade-up" style="max-width: 900px; margin: 0 auto; text-align: center; padding: 48px; border-radius: 16px; background: #ffffff; border: 1px solid var(--border-color);">
+      <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-main); line-height: 1.7; margin: 0;">
+        Managing hotel reviews across Google, TripAdvisor, Booking.com and MakeMyTrip is time-consuming and fragmented.
+        StayOS brings all your guest feedback into a single dashboard so you can <strong>respond to hotel reviews</strong>
+        quickly, <strong>collect guest feedback</strong> proactively, and improve your hotel's online reputation without
+        adding work to your front desk team.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== PROBLEM ======== -->
+  <section id="problem" class="section container">
+    <div class="reveal-wrap"><span class="feature-label reveal-text">The Problem</span></div>
+    <div class="reveal-wrap">
+      <h2 class="reveal-text d1">The problem hotels face with reviews</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card card-3d">
+        <div class="problem-icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="var(--primary)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        </div>
+        <span class="step-label">PROBLEM 1</span>
+        <h3>Scattered review platforms</h3>
+        <p>Your reviews live on five different sites. Checking each one every day takes hours you don't have, and negative reviews go unnoticed until the damage is done.</p>
+      </div>
+      <div class="problem-card card-3d">
+        <div class="problem-icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="var(--primary)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <span class="step-label">PROBLEM 2</span>
+        <h3>Slow or no reply management</h3>
+        <p>Guests who leave a poor review and never get a reply share that experience with others. A slow response time signals that your hotel doesn't care about guest feedback.</p>
+      </div>
+      <div class="problem-card card-3d">
+        <div class="problem-icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="var(--primary)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle><line x1="3" y1="3" x2="21" y2="21"></line></svg>
+        </div>
+        <span class="step-label">PROBLEM 3</span>
+        <h3>No visibility into feedback trends</h3>
+        <p>Without aggregated data you can't see whether cleanliness, staff behaviour or check-in speed is driving your low ratings — so you can't fix the right things.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS ======== -->
+  <section id="workflow" class="section container-wide results-section">
+    <div class="results-header">
+      <span>RESULTS</span>
+      <span>THE NUMBERS</span>
+    </div>
+    <div class="results-timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-dot"><span class="inner-dot"></span></div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-col fade-up">
+        <span class="stat-small">REPLY RATE</span>
+        <div class="stat-huge">82%</div>
+        <p class="stat-desc">Reply rate achieved by StayOS users across all review platforms.</p>
+      </div>
+      <div class="stat-col fade-up d2">
+        <span class="stat-small">MEDIAN REPLY TIME</span>
+        <div class="stat-huge">6h</div>
+        <p class="stat-desc">Median reply time for hotels using StayOS reply management.</p>
+      </div>
+      <div class="stat-col fade-up d3">
+        <span class="stat-small">REVIEWS TRACKED</span>
+        <div class="stat-huge">426</div>
+        <p class="stat-desc">Guest reviews currently tracked across all connected sources.</p>
+      </div>
+      <div class="stat-col fade-up d4">
+        <span class="stat-small">PLATFORMS</span>
+        <div class="stat-huge">5</div>
+        <p class="stat-desc">Review platforms connected: Google, TripAdvisor, Booking.com, MakeMyTrip and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== HOW STAYOS HELPS ======== -->
+  <section id="platform" class="section container-wide">
+    <div class="container" style="margin-bottom: var(--sp-xl);">
+      <div class="reveal-wrap"><span class="feature-label reveal-text">How StayOS Helps</span></div>
+      <div class="reveal-wrap">
+        <h2 class="reveal-text d1">Every tool you need to manage your hotel's reputation.</h2>
+      </div>
+    </div>
+
+    <div class="features-alternating container">
+
+      <!-- Manage guest reviews -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Manage guest reviews from every platform</h3>
+          <p>Google, TripAdvisor, Booking.com, MakeMyTrip and more — all pulled into one continuous stream.
+            Every review surfaces the moment it is posted, regardless of origin. No platform left behind,
+            no review missed.</p>
+          <a href="signup.html" class="btn btn-outline" style="margin-top: var(--sp-md);" data-ga-cta="feature_manage_reviews">Get early access</a>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_sources.png" loading="lazy" width="720" height="450"
+            alt="StayOS unified review sources dashboard connecting Google, TripAdvisor, Booking.com and MakeMyTrip for hotel review management">
+        </div>
+      </div>
+
+      <!-- Collect guest feedback -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Collect guest feedback automatically</h3>
+          <p>Trigger WhatsApp, SMS or email follow-ups automatically after checkout.
+            Reach guests when their experience is still fresh and increase your review volume
+            without adding a single task to your front desk workflow.</p>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_requests.png" loading="lazy" width="720" height="450"
+            alt="StayOS automated guest feedback collection via WhatsApp, SMS and email after hotel checkout">
+        </div>
+      </div>
+
+      <!-- Reply management -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Faster reply management with AI drafts</h3>
+          <p>Select a Warm, Brief or Formal tone and receive a contextually accurate draft reply in seconds.
+            The AI reads the review, understands the complaint or compliment and writes a response that sounds
+            human. Your staff just approves — so you can respond to hotel reviews faster than ever.</p>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_templates.png" loading="lazy" width="720" height="450"
+            alt="StayOS AI-generated review reply templates with warm, brief and formal tone options for hotel review management">
+        </div>
+      </div>
+
+      <!-- Improve online reputation -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Improve your hotel's online reputation</h3>
+          <p>AI-analysed sentiment broken down by operational theme — cleanliness, staff behaviour, food quality,
+            check-in speed. Spot systemic issues before they become reputation crises. Data that drives
+            decisions, not just reports, so you can improve your online reputation continuously.</p>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_insights.png" loading="lazy" width="720" height="450"
+            alt="StayOS insights dashboard showing hotel reputation analysis by operational theme to help improve online reputation">
+        </div>
+      </div>
+
+      <!-- Smart auto-reply rules -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Smart Auto-Reply Rules</h3>
+          <p>Configure automation rules that match your brand policy. Four and five-star reviews can
+            auto-publish with the AI draft. One and two-star reviews always route to a human for approval.
+            The system works the way your hotel already works.</p>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_rules.png" loading="lazy" width="720" height="450"
+            alt="StayOS smart auto-reply rules engine with configurable hotel reputation management automation">
+        </div>
+      </div>
+
+      <!-- Competitor benchmarking -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Competitor Benchmarking</h3>
+          <p>Track how your ratings, reply rates and sentiment compare against local competitors.
+            Understand where you lead and where you lag. Use data to justify investment in
+            operations and strengthen your online reputation management strategy.</p>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_competitors.png" loading="lazy" width="720" height="450"
+            alt="StayOS competitor benchmarking dashboard comparing hotel ratings and reply rates for online reputation management">
+        </div>
+      </div>
+
+      <!-- Team management -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Team Management &amp; Role-Based Access</h3>
+          <p>Assign roles and permissions across your property team. Owners see portfolio-level data.
+            General Managers approve critical drafts. Front desk staff handle one-click approvals.
+            Everyone sees exactly what they need — nothing more.</p>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_team.png" loading="lazy" width="720" height="450"
+            alt="StayOS team management with role-based access for hotel owners, general managers and front desk staff">
+        </div>
+      </div>
+
+      <!-- Embeddable widgets -->
+      <div class="feature-row">
+        <div class="feature-text fade-up">
+          <h3>Embeddable Review Widgets</h3>
+          <p>Showcase your best reviews directly on your hotel website. Curate which reviews appear,
+            customise the layout and let your guests speak for you. Social proof that works around the
+            clock without any manual effort.</p>
+        </div>
+        <div class="feature-media clip-reveal d2">
+          <img src="images/localhost_4200_review_widgets.png" loading="lazy" width="720" height="450"
+            alt="StayOS embeddable hotel review widgets for displaying guest feedback on your hotel website">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== BENEFITS ======== -->
+  <section id="benefits" class="section container">
+    <div class="reveal-wrap"><span class="feature-label reveal-text">Benefits</span></div>
+    <div class="reveal-wrap">
+      <h2 class="reveal-text d1">Benefits for hotel owners and managers</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item fade-up">
+        <span class="benefit-number" aria-hidden="true">01</span>
+        <h3>Save hours every week</h3>
+        <p>Stop checking five separate platforms. One inbox for all your hotel reviews saves your team significant time each week.</p>
+      </div>
+      <div class="benefit-item fade-up d2">
+        <span class="benefit-number" aria-hidden="true">02</span>
+        <h3>Never miss a negative review</h3>
+        <p>Instant alerts when a low-rated review is posted mean you can respond to hotel reviews before they impact bookings.</p>
+      </div>
+      <div class="benefit-item fade-up d3">
+        <span class="benefit-number" aria-hidden="true">03</span>
+        <h3>Build a stronger reputation</h3>
+        <p>A higher reply rate and faster response time directly improves your ranking on booking platforms and your overall online reputation.</p>
+      </div>
+      <div class="benefit-item fade-up d4">
+        <span class="benefit-number" aria-hidden="true">04</span>
+        <h3>Operational intelligence</h3>
+        <p>Understand exactly what guests complain about most — and fix it — with AI-powered sentiment analysis across all your guest feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PERSPECTIVES (Horizontal Scroll) ======== -->
+  <section id="solutions" class="solutions-section">
+    <div class="container" style="margin-bottom: var(--sp-xl);">
+      <div class="reveal-wrap"><span class="feature-label reveal-text">Who It Serves</span></div>
+      <div class="reveal-wrap">
+        <h2 class="reveal-text d1">One system, multiple perspectives.</h2>
+      </div>
+    </div>
+    <div class="horizontal-scroll-wrapper">
+      <div class="horizontal-container">
+        <div class="perspective-panel">
+          <span class="perspective-role">Ownership</span>
+          <p>Portfolio-level ROI view. Track overall brand sentiment, identify underperforming properties, and
+            measure the financial impact of reputation improvements across your entire group.</p>
+        </div>
+        <div class="perspective-panel">
+          <span class="perspective-role">General Manager</span>
+          <p>Approve critical reply drafts, spot operational bottlenecks surfaced by guest feedback, and ensure
+            your team maintains brand standards across every single response to hotel reviews.</p>
+        </div>
+        <div class="perspective-panel">
+          <span class="perspective-role">Front Desk</span>
+          <p>One-click approvals for AI-generated reply drafts. No more struggling to find the right words for an
+            unhappy guest at 2 AM. StayOS handles the language; your staff handles the empathy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== HOW IT WORKS ======== -->
+  <section id="how-it-works" class="section container">
+    <div class="reveal-wrap"><span class="feature-label reveal-text">How It Works</span></div>
+    <div class="reveal-wrap">
+      <h2 class="reveal-text d1">Up and running in three steps</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item fade-up">
+        <span class="step-number" aria-hidden="true">1</span>
+        <h3>Connect your review platforms</h3>
+        <p>Link Google, TripAdvisor, Booking.com and other platforms in minutes. All your hotel reviews appear in one unified inbox.</p>
+      </div>
+      <div class="step-item fade-up d2">
+        <span class="step-number" aria-hidden="true">2</span>
+        <h3>Respond with AI-powered drafts</h3>
+        <p>StayOS generates contextual reply drafts instantly. Your team selects a tone, reviews the draft and publishes — all in seconds.</p>
+      </div>
+      <div class="step-item fade-up d3">
+        <span class="step-number" aria-hidden="true">3</span>
+        <h3>Track, improve and grow</h3>
+        <p>Use the insights dashboard to spot trends in guest feedback, fix recurring issues and watch your online reputation improve over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FAQ ======== -->
+  <section id="faq" class="section container">
+    <div class="reveal-wrap"><span class="feature-label reveal-text">FAQ</span></div>
+    <div class="reveal-wrap">
+      <h2 class="reveal-text d1">Frequently asked questions</h2>
+    </div>
+    <div class="faq-list" style="margin-top: var(--sp-xl); max-width: 800px;">
+
+      <div class="faq-item fade-up">
+        <button class="faq-question" aria-expanded="false" id="faq-q1">
+          What is hotel review management software?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region" aria-labelledby="faq-q1">
+          <p>Hotel review management software is a platform that collects guest reviews from multiple booking and travel sites — such as Google, TripAdvisor and Booking.com — into one dashboard. It helps hotel teams respond to hotel reviews promptly, analyse guest feedback trends and improve their online reputation without switching between multiple platforms.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up d2">
+        <button class="faq-question" aria-expanded="false" id="faq-q2">
+          Which review platforms does StayOS support?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region" aria-labelledby="faq-q2">
+          <p>StayOS currently supports Google, TripAdvisor, Booking.com, MakeMyTrip and additional platforms. We are continuously adding new integrations based on feedback from our waitlist. Sign up to get notified when your preferred platform is available.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up d3">
+        <button class="faq-question" aria-expanded="false" id="faq-q3">
+          How does StayOS help me improve my hotel's online reputation?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region" aria-labelledby="faq-q3">
+          <p>StayOS improves your online reputation in three ways: it ensures no review goes unanswered (higher reply rates are rewarded by booking platforms), it helps you reply faster with AI-generated drafts, and it surfaces recurring issues in guest feedback so you can fix the root cause — not just the symptom.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up d4">
+        <button class="faq-question" aria-expanded="false" id="faq-q4">
+          Is StayOS suitable for independent hotels as well as hotel chains?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region" aria-labelledby="faq-q4">
+          <p>Yes. StayOS is designed to work for single-property independent hotels, boutique properties and large hotel groups. Owners of chains get a portfolio-level view; single property managers get the full operational toolkit. Role-based access means everyone on your team sees exactly what they need.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up d5">
+        <button class="faq-question" aria-expanded="false" id="faq-q5">
+          When will StayOS be available?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region" aria-labelledby="faq-q5">
+          <p>StayOS is currently in early access. Join the waitlist today and you will be among the first to be notified when we go live. Early access members also get the opportunity to shape the product through direct feedback sessions with the StayOS team.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== CTA ======== -->
+  <section class="cta-section brutal-cta">
+    <div class="cta-top">
+      <span>START</span>
+      <span>STAYOS</span>
+    </div>
+    <div class="cta-main container">
+      <h2 class="cta-title">
+        <span class="reveal-wrap"><span class="reveal-text">Ready to</span></span>
+        <span class="reveal-wrap cta-indent"><span class="reveal-text">take<span class="inner-circle-accent"></span></span></span>
+        <span class="reveal-wrap"><span class="reveal-text">control?</span></span>
+      </h2>
+      <div class="cta-side fade-up">
+        <p>Join the hotels that will use StayOS to transform their review management and improve their online reputation.</p>
+        <a href="signup.html" class="cta-button magnetic" id="footer-cta" data-ga-cta="footer_cta">
+          <span>Get Early Access</span>
+          <span>&nearr;</span>
+        </a>
+      </div>
+    </div>
+    <!-- Orbit rings -->
+    <div class="orbit-ring ring-1"></div>
+    <div class="orbit-ring ring-2"></div>
+    <div class="cta-footer-strip">STAYOS &bull; HOTEL REVIEW MANAGEMENT &bull; ONLINE REPUTATION &bull;</div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>StayOS</h4>
+          <a href="#platform">Platform</a>
+          <a href="#faq">FAQ</a>
+          <a href="signup.html">Get Early Access</a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#platform">Manage Hotel Reviews</a>
+          <a href="#platform">Collect Guest Feedback</a>
+          <a href="#platform">Online Reputation Management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StayOS. All rights reserved.</p>
+        <p>Hotel review management software for modern hospitality.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== STRUCTURED DATA ======== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "StayOS",
+    "description": "StayOS is hotel review management software that helps hotels manage guest reviews, collect feedback and improve their online reputation."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "StayOS",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Hotel review management software that unifies guest reviews from Google, TripAdvisor, Booking.com and more. Features include AI reply drafts, automated review requests, competitor benchmarking and online reputation management for hotels.",
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is hotel review management software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hotel review management software is a platform that collects guest reviews from multiple booking and travel sites into one dashboard. It helps hotel teams respond to reviews promptly, analyse feedback trends and improve their online reputation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which review platforms does StayOS support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StayOS supports Google, TripAdvisor, Booking.com, MakeMyTrip and additional platforms, with new integrations being added based on user feedback."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does StayOS help me improve my hotel's online reputation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StayOS improves your online reputation by ensuring no review goes unanswered, helping you reply faster with AI-generated drafts, and surfacing recurring issues in guest feedback so you can fix the root cause."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is StayOS suitable for independent hotels as well as hotel chains?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. StayOS works for single-property independent hotels, boutique properties and large hotel groups. Role-based access means everyone on your team sees exactly what they need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will StayOS be available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StayOS is currently in early access. Join the waitlist and you will be among the first to be notified when we go live."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Scripts — deferred for performance -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
+

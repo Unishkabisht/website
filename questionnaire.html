@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tell Us About Your Hotel – StayOS</title>
+  <meta name="description" content="Help us understand your hotel's needs so we can make StayOS the perfect hotel review management software for you.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="su-body">
+
+  <div class="su-wrap">
+    <header class="su-top">
+      <a href="index.html" class="logo" aria-label="StayOS home">
+        <img src="images/stayoslogo.png" alt="StayOS logo" class="logo-img" />
+      </a>
+      <a href="index.html" class="su-exit">Save and exit</a>
+    </header>
+    <div class="su-progress">
+      <p class="su-step-label">Step 2 of 2</p>
+      <div class="su-bars" aria-hidden="true">
+        <span class="on"></span>
+        <span class="on"></span>
+      </div>
+    </div>
+
+    <main>
+      <h1>Just one last thing</h1>
+      <p class="su-sub">Help us understand your biggest challenges so we can personalize StayOS.</p>
+
+      <div id="q-error" class="form-error" role="alert" style="display:none;"></div>
+
+      <form action="confirmation.html" id="questionnaireForm" novalidate>
+        <!-- Goal Options (Radio Cards) -->
+        <div class="form-group">
+          <label>What are your primary goals with StayOS? (Select all that apply)</label>
+          <div class="su-radio-group">
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Boost ratings" />
+              <span class="su-radio-card">Boost our online ratings</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Save time" />
+              <span class="su-radio-card">Save time replying to reviews</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Consolidate platforms" />
+              <span class="su-radio-card">Manage all platforms in one place</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Understand guests" />
+              <span class="su-radio-card">Get better insights into guest feedback</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Outrank competitors" />
+              <span class="su-radio-card">Outrank local competitors on TripAdvisor</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Increase direct bookings" />
+              <span class="su-radio-card">Increase direct bookings</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Automate responses" />
+              <span class="su-radio-card">Automate responses using AI</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="reason" value="Other" onchange="document.getElementById('reason_other').focus()" />
+              <span class="su-radio-card" style="display:flex; align-items:center; gap:8px;">
+                Other:
+                <input type="text" id="reason_other" name="reason_other" class="su-other-input" placeholder="Type your answer..." onfocus="this.parentElement.previousElementSibling.checked = true" style="flex:1; border:none; outline:none; background:transparent; font-size:12px; border-bottom:1px dashed var(--border-color); padding-bottom:2px;" />
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Challenge Options (Radio Cards) -->
+        <div class="form-group" style="margin-top:24px;">
+          <label>What are your biggest challenges right now? (Select all that apply)</label>
+          <div class="su-radio-group">
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Negative reviews unnoticed" />
+              <span class="su-radio-card">Negative reviews go unnoticed</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Not enough reviews" />
+              <span class="su-radio-card">Not getting enough reviews from happy guests</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Too manual" />
+              <span class="su-radio-card">Replying manually takes too much time</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Staff ignores feedback" />
+              <span class="su-radio-card">Staff does not act on guest feedback</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Hard to track performance" />
+              <span class="su-radio-card">Hard to track performance across different properties</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Don't know how to respond" />
+              <span class="su-radio-card">Don't know how to respond to angry guests</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Losing bookings" />
+              <span class="su-radio-card">Losing bookings to competitors with better reviews</span>
+            </label>
+            <label class="su-radio-label">
+              <input type="checkbox" name="challenge" value="Other" onchange="document.getElementById('challenge_other').focus()" />
+              <span class="su-radio-card" style="display:flex; align-items:center; gap:8px;">
+                Other:
+                <input type="text" id="challenge_other" name="challenge_other" class="su-other-input" placeholder="Type your answer..." onfocus="this.parentElement.previousElementSibling.checked = true" style="flex:1; border:none; outline:none; background:transparent; font-size:12px; border-bottom:1px dashed var(--border-color); padding-bottom:2px;" />
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" id="q-submit" class="btn btn-primary btn-block su-btn">
+          Submit &amp; Finish
+        </button>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
+
+
+

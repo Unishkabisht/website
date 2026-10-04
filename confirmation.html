@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're on the List – StayOS</title>
+  <meta name="description"
+    content="Thank you for joining the StayOS waitlist. You will be notified when StayOS goes live.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="su-body">
+
+  <div class="su-wrap" style="align-items: center; justify-content: center;">
+    <header class="su-top" style="width: 100%; margin-bottom: 20px;">
+      <a href="index.html" class="logo" aria-label="StayOS home">
+        <img src="images/stayoslogo.png" alt="StayOS logo" class="logo-img" />
+      </a>
+    </header>
+
+    <main style="text-align: center; width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+      <!-- Premium Checkmark icon -->
+      <div
+        style="width: 80px; height: 80px; background-color: var(--sage-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+        <svg viewBox="0 0 24 24" width="40" height="40" stroke="var(--primary)" stroke-width="2" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1 style="font-size: 32px; color: var(--heading); margin-bottom: 12px;">You're all set!</h1>
+      <p style="font-size: 16px; color: var(--muted); max-width: 400px; line-height: 1.6; margin-bottom: 32px;">
+        Thank you for completing the setup. We're getting your StayOS dashboard ready. We will notify you at the email
+        provided as soon as your account is activated.
+      </p>
+
+      <div style="width: 100%; max-width: 300px;">
+        <a href="index.html" class="btn btn-primary btn-block su-btn" id="backHomeBtn"
+          style="margin-bottom: 12px; display: block; text-align: center;">
+          Return to Website
+        </a>
+        <button id="logoutBtn" data-action="logout" class="btn btn-block"
+          style="background: transparent; border: 1px solid var(--border-color); color: var(--text-main); padding: 14px; font-size: 16px; border-radius: 6px; cursor: pointer;">
+          Log Out
+        </button>
+      </div>
+
+      <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color); width: 100%;">
+        <p style="font-size: 13px; color: var(--muted);">
+          Want to learn more? Check out our <a href="index.html#workflow"
+            style="color: var(--accent); font-weight: 600;">Features</a>.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+
+</html>

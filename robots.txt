@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /login.html
+Disallow: /signup
+Disallow: /signup.html
+Disallow: /questionnaire
+Disallow: /questionnaire.html
+Disallow: /confirmation
+Disallow: /confirmation.html
+
+Sitemap: https://ourdomain.com/sitemap.xml
